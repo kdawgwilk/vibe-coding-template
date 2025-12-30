@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.25.0",
+  "scripts": {
+    "lint": "pnpm -r lint",
+    "lint:ci": "pnpm -r lint:ci"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {}
+}
