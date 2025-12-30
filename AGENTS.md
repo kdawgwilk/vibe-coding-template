@@ -10,8 +10,10 @@ References:
 - **Install deps**: `pnpm install`
 - **Dev (web)**: `pnpm dev` (alias of `pnpm dev:web`)
 - **Dev (web)**: `pnpm dev:web`
+- **Dev (mobile / Expo)**: `pnpm dev:mobile`
 - **Dev (mobile iOS)**: `pnpm dev:ios`
 - **Dev (mobile Android)**: `pnpm dev:android`
+- **Dev (desktop)**: `pnpm dev:desktop`
 - **Lint + auto-fix (Biome)**: `pnpm lint`
 - **Lint (CI / no writes)**: `pnpm lint:ci`
 - **Build (runs `build` where present)**: `pnpm build`
@@ -19,6 +21,7 @@ References:
 ## Repo Layout
 - `apps/web/`: Next.js “fullstack” app (App Router) + Tailwind + shadcn/ui
 - `apps/mobile/`: Expo + React Native (Expo Router) + NativeWind
+- `apps/desktop/`: Electron + Vite + React + Tailwind
 - `docs/`: extra docs (keep AGENTS.md files short)
 - `libs/`: shared packages (when you add a new package here, also add `libs/<pkg>/AGENTS.md`)
 
@@ -33,6 +36,7 @@ References:
 ## Where to Make Changes
 - Web UI/components live under `apps/web/src/`.
 - Mobile screens/components live under `apps/mobile/app/` and `apps/mobile/components/`.
+- Desktop UI and Electron code live under `apps/desktop/src/` (main/preload/renderer).
 - Shared, reusable code should go into `libs/<new-package>/` (create a package with its own `package.json`, `tsconfig.json`, and `AGENTS.md`).
 
 ## Environment Variables (high-level)
@@ -42,3 +46,4 @@ See `docs/SETUP.md` for the authoritative list + local setup steps.
 - `pnpm lint:ci` is clean.
 - Web builds: `pnpm --filter web build` succeeds.
 - Mobile boots: `pnpm dev:ios` or `pnpm dev:android` launches Expo and the app loads.
+- Desktop boots: `pnpm dev:desktop` launches Electron and the window loads.

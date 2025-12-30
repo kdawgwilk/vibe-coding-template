@@ -3,6 +3,7 @@
 This repo is a **template monorepo** for:
 - `apps/web`: Next.js fullstack app (Tailwind + shadcn/ui)
 - `apps/mobile`: Expo + React Native (NativeWind)
+- `apps/desktop`: Electron + Vite + React (Tailwind)
 - Auth on both: Supabase
 
 ## Prerequisites
@@ -30,6 +31,12 @@ This repo is a **template monorepo** for:
   - `ANDROID_HOME`
   - `PATH` includes Android SDK platform-tools
 
+### Desktop (for `pnpm dev:desktop`)
+- Desktop runs on Electron (Node native modules may compile during install).
+- Ensure you have:
+  - **Xcode Command Line Tools**: `xcode-select --install`
+  - **Python 3** (usually already on macOS; if needed: `brew install python`)
+
 ### Supabase
 - A Supabase project (hosted) is the default assumption for this template.
 - Optional: Supabase CLI if you want local dev / migrations: `https://supabase.com/docs/guides/cli`
@@ -45,7 +52,7 @@ Create: `apps/web/.env.local`
 
 Minimum recommended vars:
 - `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY`
 
 Optional server-only (never prefix with `NEXT_PUBLIC_`):
 - `SUPABASE_SERVICE_ROLE_KEY`
@@ -83,11 +90,19 @@ From repo root:
 
 ### Mobile (Expo)
 From repo root:
+- `pnpm dev:mobile`
 - `pnpm dev:ios`
 - `pnpm dev:android`
 
 Alternative (from `apps/mobile/`):
-- `pnpm dev`
+- `pnpm start`
+
+### Desktop (Electron)
+From repo root:
+- `pnpm dev:desktop`
+
+Alternative (from `apps/desktop/`):
+- `pnpm start`
 
 ## Linting / Formatting (Biome)
 - **Autofix** (writes changes): `pnpm lint`
@@ -101,6 +116,7 @@ Notes:
 Add dependencies to the package that needs them:
 - Web: `pnpm --filter web add <pkg>`
 - Mobile: `pnpm --filter mobile add <pkg>`
+- Desktop: `pnpm --filter desktop add <pkg>`
 
 ## LLM Providers / Vercel AI SDK
 Guidelines for this template:
@@ -123,3 +139,6 @@ When configuring new deps or provider features, use the **Context7 MCP server** 
 ### Android issues
 - Ensure an emulator exists and is running (Android Studio Device Manager).
 - Verify `ANDROID_HOME` and SDK toolchain paths.
+
+### Desktop issues
+- If install fails while building native modules, confirm Xcode CLTs are installed (`xcode-select --install`) and try reinstalling dependencies.
