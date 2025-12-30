@@ -24,10 +24,10 @@ Follow the full setup guide:
 At minimum:
 - **Web** (`apps/web/.env.local`)
   - `NEXT_PUBLIC_SUPABASE_URL`
-  - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY`
+  - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
 - **Mobile** (`apps/mobile/.env`)
   - `EXPO_PUBLIC_SUPABASE_URL`
-  - `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+  - `EXPO_PUBLIC_SUPABASE_KEY`
 
 ### 4) Run apps locally
 From repo root:

@@ -52,7 +52,7 @@ Create: `apps/web/.env.local`
 
 Minimum recommended vars:
 - `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
 
 Optional server-only (never prefix with `NEXT_PUBLIC_`):
 - `SUPABASE_SERVICE_ROLE_KEY`
@@ -67,7 +67,7 @@ Create: `apps/mobile/.env`
 
 Required vars (used by `apps/mobile/utils/supabase.ts`):
 - `EXPO_PUBLIC_SUPABASE_URL`
-- `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+- `EXPO_PUBLIC_SUPABASE_KEY`
 
 Notes:
 - Expo only exposes variables prefixed with `EXPO_PUBLIC_` to the app bundle.

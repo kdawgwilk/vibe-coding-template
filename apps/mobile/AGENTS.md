@@ -27,7 +27,7 @@ The Supabase client is created in `utils/supabase.ts` using Expo public env vars
 
 Create `apps/mobile/.env` with:
 - `EXPO_PUBLIC_SUPABASE_URL`
-- `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+- `EXPO_PUBLIC_SUPABASE_KEY`
 
 Guidelines:
 - Only use anon/public keys on-device.
