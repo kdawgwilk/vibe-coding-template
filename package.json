@@ -1,16 +1,23 @@
 {
-  "name": "root",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "packageManager": "pnpm@10.25.0",
-  "scripts": {
-    "lint": "pnpm -r lint",
-    "lint:ci": "pnpm -r lint:ci"
-  },
-  "keywords": [],
-  "devDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {}
+	"name": "root",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"packageManager": "pnpm@10.25.0",
+	"scripts": {
+		"dev": "pnpm dev:web",
+		"dev:web": "pnpm --filter web dev",
+		"dev:ios": "pnpm --filter mobile dev:ios",
+		"dev:android": "pnpm --filter mobile dev:android",
+		"build": "pnpm -r build",
+		"lint": "pnpm -r lint",
+		"lint:ci": "pnpm -r lint:ci"
+	},
+	"keywords": [],
+	"devDependencies": {
+		"@biomejs/biome": "2.3.10",
+		"@types/node": "^24",
+		"typescript": "^5"
+	},
+	"dependencies": {}
 }

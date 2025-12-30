@@ -1,3 +1,9 @@
 packages:
-  - 'apps/*'
-  - 'libs/*'
+  - apps/*
+  - libs/*
+
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+
+nodeLinker: hoisted
