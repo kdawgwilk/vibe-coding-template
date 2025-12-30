@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "./apps/mobile/tsconfig.json"
+		},
+		{
+			"path": "./apps/desktop/tsconfig.json"
 		}
 	]
 }
