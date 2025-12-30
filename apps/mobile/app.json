@@ -1,0 +1,41 @@
+{
+	"expo": {
+		"name": "<REPLACE_ME>",
+		"slug": "<REPLACE_ME>",
+		"version": "0.1.0",
+		"scheme": "<REPLACE_ME>",
+		"platforms": ["ios", "android"],
+		"web": {
+			"bundler": "metro",
+			"output": "static",
+			"favicon": "./assets/favicon.png"
+		},
+		"plugins": ["expo-router"],
+		"experiments": {
+			"typedRoutes": true,
+
+			"tsconfigPaths": true
+		},
+
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+
+		"userInterfaceStyle": "light",
+
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			}
+		}
+	}
+}
